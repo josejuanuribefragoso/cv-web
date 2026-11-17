@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>José Juan Uribe Fragoso - Coordinador de TI e Ingeniero de Soporte</title>
+    <meta name="description" content="Currículum vitae de José Juan Uribe Fragoso, Coordinador de TI, Ingeniero de Soporte Técnico y Especialista en Automatización y Desarrollo Web.">
+    
+    <!-- Datos Estructurados Schema.org para Parsers y ATS modernos -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "Person",
+      "name": "José Juan Uribe Fragoso",
+      "jobTitle": "Coordinador de TI e Ingeniero de Soporte Técnico",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "García",
+        "addressRegion": "Nuevo León",
+        "addressCountry": "México"
+      },
+      "email": "jjuf8723@gmail.com",
+      "telephone": "+528124905756",
+      "knowsAbout": ["PHP", "Diseño Web", "Soporte Técnico", "Active Directory", "Redes LAN/WAN", "Odoo", "AppSheet", "Loyverse", "Automatización"]
+    }
+    </script>
+
+    <!-- Iconos (FontAwesome CDN) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Fuente moderna y legible -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #0f172a;
+            --text-muted: #475569;
+            --accent: #2563eb;
+            --accent-hover: #1d4ed8;
+            --border: #e2e8f0;
+            --whatsapp: #25D366;
+            --whatsapp-hover: #128C7E;
+        }
+
+        /* Modo Oscuro */
+        [data-theme="dark"] {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent: #38bdf8;
+            --accent-hover: #0284c7;
+            --border: #334155;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            transition: background-color 0.3s, color 0.3s;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            border: 1px solid var(--border);
+        }
+
+        /* Barra Superior Interactiva */
+        .top-controls {
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+            margin-bottom: 1.5rem;
+        }
+
+        .btn-control {
+            background: transparent;
+            border: 1px solid var(--border);
+            color: var(--text-main);
+            padding: 0.4rem 0.8rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s;
+        }
+
+        .btn-control:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        /* Encabezado */
+        header {
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.2rem;
+        }
+
+        .subtitle {
+            font-size: 1.15rem;
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .contact-info a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .contact-info a:hover {
+            color: var(--accent);
+        }
+
+        /* Secciones */
+        section {
+            margin-bottom: 2rem;
+        }
+
+        h2 {
+            font-size: 1.25rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--accent);
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 0.4rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Filtro interactivo de Habilidades */
+        .filter-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .filter-btn {
+            background: var(--bg-color);
+            border: 1px solid var(--border);
+            color: var(--text-muted);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.8rem;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+
+        .filter-btn.active, .filter-btn:hover {
+            background: var(--accent);
+            color: #fff;
+            border-color: var(--accent);
+        }
+
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+        }
+
+        .skill-tag {
+            background: var(--bg-color);
+            border: 1px solid var(--border);
+            padding: 0.4rem 0.9rem;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: transform 0.2s, opacity 0.3s;
+        }
+
+        .skill-tag:hover {
+            transform: translateY(-2px);
+            border-color: var(--accent);
+        }
+
+        .skill-tag.hidden {
+            display: none;
+        }
+
+        /* Experiencia y Educación */
+        .job-item {
+            margin-bottom: 1.5rem;
+            padding-left: 1rem;
+            border-left: 3px solid var(--border);
+            transition: border-color 0.3s;
+        }
+
+        .job-item:hover {
+            border-left-color: var(--accent);
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            margin-bottom: 0.3rem;
+        }
+
+        h3 {
+            font-size: 1.05rem;
+            font-weight: 700;
+        }
+
+        .company {
+            font-weight: 600;
+            color: var(--text-muted);
+        }
+
+        .date {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        ul {
+            margin-left: 1.2rem;
+            margin-top: 0.5rem;
+        }
+
+        li {
+            margin-bottom: 0.3rem;
+            font-size: 0.95rem;
+        }
+
+        /* Botón Flotante de WhatsApp */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background-color: var(--whatsapp);
+            color: #fff;
+            padding: 12px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            z-index: 1000;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .whatsapp-float:hover {
+            background-color: var(--whatsapp-hover);
+            transform: scale(1.05);
+        }
+
+        /* Animación de entrada */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(15px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* =========================================================
+           REGLAS DE IMPRESIÓN (OPTIMIZACIÓN PARA FILTROS ATS)
+           ========================================================= */
+        @media print {
+            body {
+                background: #ffffff !important;
+                color: #000000 !important;
+                padding: 0;
+                font-size: 11pt;
+            }
+            .container {
+                box-shadow: none;
+                border: none;
+                padding: 0;
+                max-width: 100%;
+            }
+            .top-controls, .whatsapp-float, .filter-buttons {
+                display: none !important;
+            }
+            .skill-tag.hidden {
+                display: inline-block !important;
+            }
+            .skill-tag {
+                border: none;
+                padding: 0;
+                background: none;
+            }
+            .skill-tag::after {
+                content: " • ";
+            }
+            .skill-tag:last-child::after {
+                content: "";
+            }
+            .fade-in {
+                opacity: 1 !important;
+                transform: none !important;
+            }
+            a {
+                color: #000000 !important;
+                text-decoration: none;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .container { padding: 1.5rem; }
+            .job-header { flex-direction: column; }
+            .whatsapp-float span { display: none; }
+            .whatsapp-float { padding: 15px; border-radius: 50%; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Controles Interactivos -->
+        <div class="top-controls">
+            <button class="btn-control" id="theme-toggle" aria-label="Cambiar tema">
+                <i class="fas fa-moon"></i> <span>Modo Oscuro</span>
+            </button>
+            <button class="btn-control" onclick="window.print()" aria-label="Descargar PDF para ATS">
+                <i class="fas fa-file-pdf"></i> <span>Guardar PDF (Formato ATS)</span>
+            </button>
+        </div>
+
+        <!-- Encabezado Semántico -->
+        <header>
+            <h1>José Juan Uribe Fragoso</h1>
+            <div class="subtitle">Coordinador de TI e Ingeniero de Soporte Técnico</div>
+            <div class="contact-info">
+                <span><i class="fas fa-map-marker-alt"></i> García, Nuevo León</span>
+                <span><i class="fas fa-envelope"></i> <a href="mailto:jjuf8723@gmail.com">jjuf8723@gmail.com</a></span>
+                <span><i class="fas fa-phone"></i> <a href="tel:+528124905756">812 490 5756</a></span>
+            </div>
+        </header>
+
+        <main>
+            <!-- Resumen Profesional -->
+            <section class="fade-in">
+                <h2>Perfil Profesional</h2>
+                <p>
+                    Profesional de TI con sólida formación educativa, especializado en soporte avanzado, administración de redes, desarrollo web y automatización. Combino experiencia técnica y pedagógica para traducir problemas complejos en soluciones rápidas y empáticas, garantizando la continuidad operativa y la eficiencia en entornos corporativos.
+                </p>
+            </section>
+
+            <!-- Habilidades con Filtro Interactivo -->
+            <section class="fade-in">
+                <h2>Habilidades Técnicas y Competencias</h2>
+                
+                <!-- Botones de filtro -->
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">Todas</button>
+                    <button class="filter-btn" data-filter="dev">Desarrollo Web & Programación</button>
+                    <button class="filter-btn" data-filter="tech">Sistemas & Redes</button>
+                    <button class="filter-btn" data-filter="mgmt">Gestión & Automatización</button>
+                </div>
+
+                <!-- Etiquetas semánticas leídas por ATS -->
+                <div class="skills-grid">
+                    <!-- Nuevas habilidades solicitadas -->
+                    <span class="skill-tag" data-category="dev">PHP (Programación Web)</span>
+                    <span class="skill-tag" data-category="dev">Diseño Web UI/UX</span>
+                    <span class="skill-tag" data-category="dev">HTML5 / CSS3 / JavaScript</span>
+                    
+                    <!-- Habilidades de Soporte e Infraestructura -->
+                    <span class="skill-tag" data-category="tech">Sistemas Operativos (Windows, Linux, Mac)</span>
+                    <span class="skill-tag" data-category="tech">Redes LAN / WAN / WIFI / DNS</span>
+                    <span class="skill-tag" data-category="tech">Soporte Técnico Nivel Avanzado</span>
+                    <span class="skill-tag" data-category="tech">Hardware, CCTV y DVR</span>
+                    <span class="skill-tag" data-category="tech">Active Directory</span>
+                    
+                    <!-- Gestión y Automatización -->
+                    <span class="skill-tag" data-category="mgmt">Odoo / Loyverse / AppSheet</span>
+                    <span class="skill-tag" data-category="mgmt">Automatización de Bases de Datos</span>
+                    <span class="skill-tag" data-category="mgmt">ITIL Foundations V3</span>
+                    <span class="skill-tag" data-category="mgmt">CCNA Cisco</span>
+                </div>
+            </section>
+
+            <!-- Experiencia Laboral -->
+            <section class="fade-in">
+                <h2>Experiencia Profesional</h2>
+
+                <article class="job-item">
+                    <div class="job-header">
+                        <div>
+                            <h3>Coordinador de TI y Operaciones</h3>
+                            <span class="company">Urizen Centro de Asesorías</span>
+                        </div>
+                        <span class="date">Marzo 2022 – Actualidad</span>
+                    </div>
+                    <ul>
+                        <li>Lidero el desarrollo e implementación de nuevas tecnologías empresariales (Odoo, Loyverse, AppSheet), logrando la automatización exitosa de bases de datos operativas y un control preciso del inventario.</li>
+                        <li>Garantizo la continuidad del negocio mediante soporte técnico integral, asegurando la estabilidad de redes WIFI, equipos de cómputo y aplicativos mediante mantenimiento preventivo.</li>
+                    </ul>
+                </article>
+
+                <article class="job-item">
+                    <div class="job-header">
+                        <div>
+                            <h3>Ingeniero de Soporte Técnico</h3>
+                            <span class="company">Tecno-Servicios</span>
+                        </div>
+                        <span class="date">Mayo 2021 – Marzo 2022</span>
+                    </div>
+                    <ul>
+                        <li>Responsable de la instalación, configuración y despliegue de equipos y sistemas operativos multiplataforma (Windows, Mac OS, Linux).</li>
+                        <li>Ejecuté rutinas continuas de mantenimiento preventivo y correctivo, reduciendo tiempos de inactividad de los usuarios.</li>
+                        <li>Administré de forma segura los respaldos de información institucionales.</li>
+                    </ul>
+                </article>
+
+                <article class="job-item">
+                    <div class="job-header">
+                        <div>
+                            <h3>Gerente de Soporte Técnico</h3>
+                            <span class="company">Divisas San Jorge Casa de Cambio S.A. de C.V.</span>
+                        </div>
+                        <span class="date">Junio 2019 – Mayo 2021</span>
+                    </div>
+                    <ul>
+                        <li>Gestioné integralmente el departamento de soporte a usuarios a nivel corporativo y sucursales, administrando plataformas y accesos mediante Active Directory.</li>
+                        <li>Lideré el desarrollo de proveedores tecnológicos, destacando mi participación clave en el Proyecto Estratégico HEB.</li>
+                        <li>Supervisé la instalación y soporte de infraestructura de redes LAN/WAN y sistemas de seguridad (CCTV y DVR).</li>
+                    </ul>
+                </article>
+            </section>
+
+            <!-- Educación -->
+            <section class="fade-in">
+                <h2>Formación Académica</h2>
+                <article class="job-item">
+                    <div class="job-header">
+                        <div>
+                            <h3>Licenciatura en Educación Secundaria (Especialidad en Historia)</h3>
+                            <span class="company">Escuela Normal Superior Moisés Sáenz Garza</span>
+                        </div>
+                        <span class="date">2010 – 2014</span>
+                    </div>
+                </article>
+                <article class="job-item">
+                    <div class="job-header">
+                        <div>
+                            <h3>T.S.U. en Tecnologías de Información y Comunicaciones</h3>
+                            <span class="company">Universidad Tecnológica de Santa Catarina</span>
+                        </div>
+                        <span class="date">2004 – 2006</span>
+                    </div>
+                </article>
+            </section>
+
+            <!-- Cursos y Certificaciones -->
+            <section class="fade-in">
+                <h2>Cursos y Certificaciones</h2>
+                <ul>
+                    <li><strong>CCNA Cisco</strong> (200 hrs, 2015)</li>
+                    <li><strong>ITIL Foundations V3</strong> (40 hrs, 2020)</li>
+                    <li><strong>Fortinet Training</strong> (16 hrs, 2018) | <strong>MCSA: Windows 10</strong> (16 hrs, 2018)</li>
+                    <li><strong>Microsoft Office 365</strong> (16 hrs, 2018) | <strong>Manejo de grupos difíciles y Atención a Usuarios</strong> (8 hrs, 2023)</li>
+                </ul>
+            </section>
+        </main>
+    </div>
+
+    <!-- Botón Flotante de WhatsApp configurado con tu número -->
+    <a href="https://wa.me/528124905756?text=Hola%20Jos%C3%A9%20Juan%2C%20vi%20tu%20curr%C3%ADculum%20web%20y%20me%20gustar%C3%ADa%20ponerme%20en%20contacto%20contigo%20para%20una%20oportunidad%20laboral." 
+       class="whatsapp-float" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       aria-label="Contactar por WhatsApp">
+        <i class="fab fa-whatsapp fa-lg"></i>
+        <span>Enviar WhatsApp</span>
+    </a>
+
+    <!-- Scripts de Interactividad -->
+    <script>
+        // 1. Modo Oscuro / Claro
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
+        const icon = themeToggle.querySelector('i');
+        const text = themeToggle.querySelector('span');
+
+        themeToggle.addEventListener('click', () => {
+            if (body.getAttribute('data-theme') === 'dark') {
+                body.removeAttribute('data-theme');
+                icon.classList.replace('fa-sun', 'fa-moon');
+                text.textContent = 'Modo Oscuro';
+            } else {
+                body.setAttribute('data-theme', 'dark');
+                icon.classList.replace('fa-moon', 'fa-sun');
+                text.textContent = 'Modo Claro';
+            }
+        });
+
+        // 2. Filtro interactivo de habilidades
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const skillTags = document.querySelectorAll('.skill-tag');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const filter = btn.getAttribute('data-filter');
+
+                skillTags.forEach(tag => {
+                    if (filter === 'all' || tag.getAttribute('data-category') === filter) {
+                        tag.classList.remove('hidden');
+                    } else {
+                        tag.classList.add('hidden');
+                    }
+                });
+            });
+        });
+
+        // 3. Animación de entrada al hacer scroll
+        const faders = document.querySelectorAll('.fade-in');
+        const appearOptions = { threshold: 0.15 };
+
+        const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            });
+        }, appearOptions);
+
+        faders.forEach(fader => {
+            appearOnScroll.observe(fader);
+        });
+    </script>
+</body>
+</html>
